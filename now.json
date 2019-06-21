@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "name": "MarkdownWeb",
+  "alias": "MarkdownWeb",
+  "builds": [
+    {
+      "src": "converter/convert.js",
+      "use": "@now/node"
+    },
+    {
+      "src": "entrypoint/index.go",
+      "use": "@now/go"
+    }
+  ],
+  "routes": [
+       { "src": "/", "dest": "/entrypoint/index.go" }
+   ]
+}
